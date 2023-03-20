@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #4fcace;
+}
+
+.score-wrapper {
+    z-index: 3;
+    position:absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.score {
+    font-size: 3em;
+    text-align: center;
+}
+
+#player-score::after {
+    content: "|";
+}
+
+.game-wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
+#ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 2;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+}
+
+.paddle {
+    position: absolute;
+    width: 0.5vw;
+    height: 10vh;
+    background: #fff;
+    z-index: 2;
+    top: 50vh;
+    transform: translateY(-50%);
+}
+
+#player-paddle {
+    left: 1em;
+}
+
+#computer-paddle {
+    right: 1em;
+}
